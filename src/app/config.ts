@@ -1,0 +1,31 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const {
+  APP_SERVER_PORT,
+  APP_SERVER_HOST,
+  MYSQL_HOST,
+  MYSQL_PORT,
+  MYSQL_USER,
+  MYSQL_PASSWORD,
+  MYSQL_DATABASE,
+  APP_SECRET,
+  APP_ID,
+  GRANT_TYPE,
+  WE_CHAT_URL,
+} = process.env;
+
+export {
+  APP_SERVER_HOST,
+  APP_SERVER_PORT,
+  MYSQL_HOST,
+  MYSQL_PORT,
+  MYSQL_USER,
+  MYSQL_PASSWORD,
+  MYSQL_DATABASE,
+  APP_SECRET,
+  APP_ID,
+  GRANT_TYPE,
+  WE_CHAT_URL,
+};
