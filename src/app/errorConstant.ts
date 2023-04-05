@@ -76,6 +76,12 @@ const TOKEN_NOT_CARRY: ICustomError = {
   name: "TOKEN_NOT_CARRY",
 };
 
+const PARAMS_ERROR: ICustomError = {
+  message: "参数传递错误",
+  code: 500,
+  name: "PARAMS_ERROR",
+};
+
 export {
   USER_OR_PASSWORD_NOT_NULL,
   USER_NAME_NOT_EQUAL,
@@ -88,4 +94,5 @@ export {
   SESSION_KEY_EXPIRED,
   REGISTE_PARAMS_ERROR,
   TOKEN_NOT_CARRY,
+  PARAMS_ERROR,
 };

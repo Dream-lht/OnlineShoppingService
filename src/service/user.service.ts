@@ -27,6 +27,30 @@ class UserService {
       0,
     ]);
   }
+
+  // 查询所有用户信息
+  async getUserInfo() {
+    const selectSql = "select * from `user`";
+
+    return await servicePromise(selectSql);
+  }
+  // 更新用户信息
+  async upDateUserInfo(openid: string, userInfo: any) {
+    const updateSql =
+      "update `user` set `nickname`=?,`gender`=?,`phone`=?,`avatarUrl`=?,`city`=?,`province`=?,`country`=?,`region`=? where `openid` = ?";
+
+    return await servicePromise(updateSql, [
+      userInfo.nickname,
+      userInfo.gender,
+      userInfo.phone,
+      userInfo.avatarUrl,
+      userInfo.city,
+      userInfo.province,
+      userInfo.country,
+      userInfo.region,
+      openid,
+    ]);
+  }
 }
 
 export default new UserService();

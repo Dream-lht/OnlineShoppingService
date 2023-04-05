@@ -13,7 +13,6 @@ async function loginVerify(ctx: Context, next: Next) {
   const body: ILoginParams = ctx.request.body as ILoginParams;
   const { code } = body;
 
-  console.log(code);
   // 手机号或者登录code未输入
   if (!code) {
     return ctx.app.emit("error", CODE_NOT_FOUND, ctx);

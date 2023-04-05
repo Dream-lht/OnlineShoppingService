@@ -2,7 +2,7 @@
 import registerVerify from "../../middleware//registerVerify";
 import registerController from "../../controller/registerController";
 import authVerify from "../../middleware/authVerify";
-function createLoginRouter(wxRouter: any) {
+function createRegisterRouter(wxRouter: any) {
   wxRouter.post(
     "/register",
     authVerify,
@@ -11,4 +11,4 @@ function createLoginRouter(wxRouter: any) {
   );
 }
 
-module.exports = createLoginRouter;
+module.exports = createRegisterRouter;

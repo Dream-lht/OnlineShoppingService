@@ -1,6 +1,6 @@
 import connection from "../app/database";
 import { QueryError, FieldPacket } from "mysql2";
-function servicePromise(sql: string, values: any): Promise<[unknown]> {
+function servicePromise(sql: string, values?: any): Promise<[unknown]> {
   return new Promise((resolve, reject) => {
     connection.query(
       sql,

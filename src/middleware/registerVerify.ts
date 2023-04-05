@@ -26,7 +26,7 @@ async function registerVerify(ctx: Context, next: Next) {
     !registerData.session_key &&
     !registerData.openid
   ) {
-    ctx.app.emit("error", REGISTE_PARAMS_ERROR, ctx);
+    return ctx.app.emit("error", REGISTE_PARAMS_ERROR, ctx);
   }
   await next();
 }

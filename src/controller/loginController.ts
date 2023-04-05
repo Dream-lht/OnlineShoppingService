@@ -26,13 +26,10 @@ class LoginController implements ILoginController {
       session_key: "",
       token: "",
     };
-    console.log("进入");
     const { code } = ctx.request.body as ILoginParams;
-    console.log(code);
     // 校验code.获取用户openid和session_key
     const weChatData = await loginService.getUserInfoByCode(code);
     if (weChatData.errcode || weChatData.errmsg) {
-      console.log(weChatData);
       return ctx.app.emit("error", SESSION_KEY_EXPIRED, ctx);
     }
 
